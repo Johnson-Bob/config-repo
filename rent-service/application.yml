@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:rent-service;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false;
+    platform: h2
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: false
+        format_sql: false
+        use_sql_comments: false
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  application:
+    name: rent-service
+
+server:
+  port: 9001
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+animal:
+  disabled: panda
