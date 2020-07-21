@@ -16,12 +16,6 @@ spring:
       enabled: true
       path: /h2-console
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-
 base:
   currency: RUB
 
